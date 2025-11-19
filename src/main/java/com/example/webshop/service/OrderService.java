@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class OrderService {
@@ -22,6 +23,17 @@ public class OrderService {
 
     @Autowired
     private ProductRepository productRepository;
+
+    // Hämta alla ordrar
+    public List<Order> getAllOrders() {
+        return orderRepository.findAll();
+    }
+
+    // Hämta specifik order
+    public Optional<Order> getOrderById(String id) {
+        return orderRepository.findById(id);
+    }
+
 
     public OrderResponse createOrder(OrderRequest orderRequest) {
         validateOrderRequest(orderRequest);
