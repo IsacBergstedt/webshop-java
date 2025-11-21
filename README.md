@@ -192,18 +192,6 @@ GET /api/products/999 - Produkt finns inte (404)
 
 POST /api/orders med ogiltig data - Valideringsfel (400)
 
-Projektstruktur
-src/
-├── main/
-│   ├── java/com/example/webshop/
-│   │   ├── controller/     # REST Controllers
-│   │   ├── service/        # Affärslogik
-│   │   ├── repository/     # Dataåtkomst
-│   │   ├── model/          # Datamodeller
-│   │   ├── dto/            # Data Transfer Objects
-│   │   └── exception/      # Custom exceptions
-│   └── resources/          # Konfiguration
-└── test/                   # Enhetstester
 
 
 Felhantering
